@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="50.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importProductController">
+    <children>
+        <Label text="Quản lý nhập hàng ">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="68.0" prefWidth="180.0" text="Tạo phiếu nhập hàng " fx:id="btncreateImportBill" onAction="#createImportBill">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="68.0" prefWidth="180.0" text="Sửa phiếu nhập hàng ">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="68.0" prefWidth="180.0" text="Xóa phiếu nhập hàng ">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+      <AnchorPane maxHeight="92.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="600.0">
+         <children>
+            <Button focusTraversable="false" layoutX="523.0" layoutY="1.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="145.0" text="Trở về trang chủ" fx:id="btnBackToMainScreen" onAction="#backToMainScreen" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>
