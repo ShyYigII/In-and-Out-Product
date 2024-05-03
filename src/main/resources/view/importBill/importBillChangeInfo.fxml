@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.ChangeimportProductController">
+    <children>
+        <Label alignment="CENTER" prefHeight="52.0" prefWidth="208.0" text="Phiếu nhập hàng ">
+            <font>
+                <Font size="22.0" />
+            </font></Label>
+        <HBox alignment="CENTER_LEFT" prefHeight="119.0" prefWidth="800.0">
+            <children>
+                <Label prefHeight="18.0" prefWidth="200.0" text="Nhà phân phối*">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </Label>
+                <TextField fx:id="supplierLabel" prefHeight="40.0" prefWidth="300.0">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </TextField>
+            </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="114.0" prefWidth="800.0">
+            <children>
+                <Label prefHeight="18.0" prefWidth="200.0" text="Giá nhập hàng (VNĐ)*">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </Label>
+                <TextField fx:id="priceLabel" prefHeight="40.0" prefWidth="300.0">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </TextField>
+            </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="125.0" prefWidth="800.0">
+            <children>
+                <Label prefHeight="18.0" prefWidth="200.0" text="Ngày nhập hàng*">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </Label>
+                <DatePicker fx:id="dateLabel" prefHeight="41.0" prefWidth="300.0" promptText="dd/MM/yyyy">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                </DatePicker>
+            </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="800.0">
+            <children>
+                <Label prefHeight="18.0" prefWidth="200.0" text="Mô tả ">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </Label>
+                <TextArea fx:id="describeLabel" prefHeight="113.0" prefWidth="300.0" promptText="Mô tả sản phẩm">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="50.0" />
+                    </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+                </TextArea>
+            </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+        </HBox>
+        <HBox alignment="BOTTOM_RIGHT" prefHeight="82.0" prefWidth="800.0">
+            <children>
+                <Button onAction="#ChangeImportBillHandler" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Sửa">
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#CancelCreateBill" prefHeight="50.0" prefWidth="90.0" text="Hủy">
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>
