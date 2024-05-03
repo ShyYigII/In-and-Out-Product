@@ -1,0 +1,14 @@
+HBox{
+  -fx-border-color: black;
+  -fx-border-width: 1px;
+}
+
+Button{
+ -fx-background-radius: 50;
+  cursor: pointer;
+ -fx-background-color:  #ECC95F;
+}
+
+Button:hover {
+    -fx-background-color: #F68A1F;
+}

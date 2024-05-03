@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importProductController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" fx:controller="controller.mainScreenController" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label text="Phiếu nhập hàng ">
+        <Label text="Phiếu xuất hàng ">
             <font>
                 <Font size="18.0" />
             </font></Label>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="143.0" text="Tên sản phẩm* ">
+                <Label prefHeight="18.0" prefWidth="143.0" text="Tên sản phẩm ">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -26,7 +26,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="nameTextField" prefHeight="26.0" prefWidth="202.0">
+                <TextField prefHeight="26.0" prefWidth="202.0">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -38,7 +38,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="143.0" text="Nhà phân phối*">
+                <Label prefHeight="18.0" prefWidth="143.0" text="Người mua">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -46,7 +46,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="supplierTextField" prefHeight="26.0" prefWidth="202.0">
+                <TextField prefHeight="26.0" prefWidth="202.0">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -55,7 +55,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="143.0" text="Số lượng*">
+                <Label prefHeight="18.0" prefWidth="143.0" text="Số lượng">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -63,7 +63,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="quantityTextField" prefHeight="26.0" prefWidth="202.0">
+                <TextField prefHeight="26.0" prefWidth="202.0">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -72,7 +72,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="143.0" text="Giá nhập hàng (VNĐ)*">
+                <Label prefHeight="18.0" prefWidth="143.0" text="Giá xuất hàng (VNĐ)">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -80,7 +80,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <TextField fx:id="priceTextField" prefHeight="26.0" prefWidth="202.0">
+                <TextField prefHeight="26.0" prefWidth="202.0">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -89,7 +89,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="143.0" text="Ngày nhập hàng*">
+                <Label prefHeight="18.0" prefWidth="143.0" text="Ngày xuất hàng">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -97,7 +97,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <DatePicker fx:id="date" prefHeight="26.0" prefWidth="202.0" promptText="dd/MM/yyyy">
+                <DatePicker prefHeight="26.0" prefWidth="202.0">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -114,7 +114,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <TextArea fx:id="describeTextArea" prefHeight="200.0" prefWidth="200.0" promptText="Mô tả sản phẩm">
+                <TextArea prefHeight="200.0" prefWidth="200.0">
                     <HBox.margin>
                         <Insets bottom="10.0" left="50.0" />
                     </HBox.margin>
@@ -123,12 +123,12 @@
         </HBox>
         <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Button fx:id="btnAddImportBill" mnemonicParsing="false" onAction="#btnAddImportBillHandler" prefHeight="37.0" prefWidth="77.0" text="Thêm">
+                <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="77.0" text="Thêm" >
                     <HBox.margin>
                         <Insets bottom="10.0" right="20.0" />
                     </HBox.margin>
                 </Button>
-                <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancelHandler" prefHeight="37.0" prefWidth="77.0" text="Hủy">
+                <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="77.0" text="Hủy">
                     <HBox.margin>
                         <Insets bottom="10.0" right="10.0" />
                     </HBox.margin>

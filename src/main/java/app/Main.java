@@ -1,9 +1,7 @@
 package app;
 
-import controller.loginScreen;
-import controller.mainScreen;
+import controller.mainScreenController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -12,7 +10,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-        mainScreen mainscreen = new mainScreen();
+        mainScreenController mainscreen = new mainScreenController();
         Scene scene = mainscreen.initial();
         primaryStage.setScene(scene);
         primaryStage.setTitle("Quản lý xuất nhập hàng");

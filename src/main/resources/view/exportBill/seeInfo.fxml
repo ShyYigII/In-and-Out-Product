@@ -52,7 +52,7 @@
                <children>
                   <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                      <image>
-                        <Image url="@../img/hop-giay.jpg" />
+                        <Image url="@../../img/hop-giay.jpg" />
                      </image>
                   </ImageView>
                   <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xem" />
@@ -63,7 +63,7 @@
                <children>
                   <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                      <image>
-                        <Image url="@../img/hop-giay.jpg" />
+                        <Image url="@../../img/hop-giay.jpg" />
                      </image>
                   </ImageView>
                   <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xem" />
@@ -74,7 +74,7 @@
                <children>
                   <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                      <image>
-                        <Image url="@../img/hop-giay.jpg" />
+                        <Image url="@../../img/hop-giay.jpg" />
                      </image>
                   </ImageView>
                   <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xem" />
@@ -85,7 +85,7 @@
                <children>
                   <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                      <image>
-                        <Image url="@../img/hop-giay.jpg" />
+                        <Image url="@../../img/hop-giay.jpg" />
                      </image>
                   </ImageView>
                   <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xem" />

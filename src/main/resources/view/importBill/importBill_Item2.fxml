@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="around" alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="610.0" spacing="10.0" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.importBill_ItemController2">
+    <children>
+        <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../img/972601.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="ImportBillName" focusTraversable="false" prefHeight="50.0" prefWidth="112.0" text="Tên">
+            <HBox.margin>
+                <Insets bottom="20.0" left="50.0" right="20.0" top="20.0" />
+            </HBox.margin>
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="Date" focusTraversable="false" prefHeight="50.0" prefWidth="200.0" text="Label">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="seeInfoButton" mnemonicParsing="false" onAction="#click2" prefHeight="40.0" prefWidth="90.0" text="Xem" />
+        <Button fx:id="FixButton" focusTraversable="false" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="90.0" text="Sửa" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</HBox>

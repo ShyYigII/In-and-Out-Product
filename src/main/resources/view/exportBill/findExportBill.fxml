@@ -17,7 +17,7 @@
     <top>
         <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
             <children>
-                <Label alignment="TOP_LEFT" prefHeight="27.0" prefWidth="296.0" text="Tìm phiếu nhập hàng">
+                <Label alignment="TOP_LEFT" prefHeight="27.0" prefWidth="296.0" text="Tìm phiếu xuất hàng">
                     <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </VBox.margin>
@@ -52,10 +52,10 @@
                     <children>
                         <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                             <image>
-                                <Image url="@../img/972601.png" />
+                                <Image url="@../../img/972601.png" />
                             </image>
                         </ImageView>
-                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xóa" />
+                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Sửa" />
                         <TextField layoutX="122.0" layoutY="17.0" prefHeight="26.0" prefWidth="168.0" text="Phiếu hàng 1" />
                     </children>
                 </AnchorPane>
@@ -63,10 +63,10 @@
                     <children>
                         <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                             <image>
-                                <Image url="@../img/972601.png" />
+                                <Image url="@../../img/972601.png" />
                             </image>
                         </ImageView>
-                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xóa" />
+                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Sửa" />
                         <TextField layoutX="122.0" layoutY="17.0" prefWidth="168.0" text="Phiếu hàng 2" />
                     </children>
                 </AnchorPane>
@@ -74,10 +74,10 @@
                     <children>
                         <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                             <image>
-                                <Image url="@../img/972601.png" />
+                                <Image url="@../../img/972601.png" />
                             </image>
                         </ImageView>
-                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xóa " />
+                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Sửa" />
                         <TextField layoutX="122.0" layoutY="17.0" prefWidth="168.0" text="Phiếu hàng 3" />
                     </children>
                 </AnchorPane>
@@ -85,10 +85,10 @@
                     <children>
                         <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="534.6" AnchorPane.topAnchor="9.0">
                             <image>
-                                <Image url="@../img/972601.png" />
+                                <Image url="@../../img/972601.png" />
                             </image>
                         </ImageView>
-                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Xóa " />
+                        <Button layoutX="359.0" layoutY="17.0" mnemonicParsing="false" text="Sửa" />
                         <TextField layoutX="122.0" layoutY="17.0" prefWidth="168.0" text="Phiếu hàng 4" />
                     </children>
                 </AnchorPane>

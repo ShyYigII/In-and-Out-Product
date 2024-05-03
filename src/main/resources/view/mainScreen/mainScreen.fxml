@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="50.0" style="-fx-background-color: #C6C6C6;" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainScreenController">
+   <children>
+      <Label alignment="CENTER" prefHeight="75.0" prefWidth="234.0" text="Quản lý xuất nhập hàng ">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnImport" focusTraversable="false" mnemonicParsing="false" onAction="#handleImportScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Quản lý nhập hàng ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnProduct" focusTraversable="false" mnemonicParsing="false" onAction="#handleProductScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Xem thông tin hàng trong kho">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExport" focusTraversable="false" mnemonicParsing="false" onAction="#handleExportScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Quản lý xuất hàng ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane maxHeight="92.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="800.0" />
+   </children>
+</VBox>
