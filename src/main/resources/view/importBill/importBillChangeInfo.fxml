@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.ChangeimportProductController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="all" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.ChangeimportProductController">
     <children>
-        <Label alignment="CENTER" prefHeight="52.0" prefWidth="208.0" text="Phiếu nhập hàng ">
+        <Label alignment="CENTER" prefHeight="52.0" prefWidth="208.0" styleClass="title" text="Phiếu nhập hàng ">
             <font>
                 <Font size="22.0" />
             </font></Label>
         <HBox alignment="CENTER_LEFT" prefHeight="119.0" prefWidth="800.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Nhà phân phối*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Nhà phân phối* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -44,7 +44,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="114.0" prefWidth="800.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Giá nhập hàng (VNĐ)*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Giá nhập hàng (VNĐ)* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -70,7 +70,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="125.0" prefWidth="800.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Ngày nhập hàng*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Ngày nhập hàng* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -81,7 +81,7 @@
                   <Font size="15.0" />
                </font>
                 </Label>
-                <DatePicker fx:id="dateLabel" prefHeight="41.0" prefWidth="300.0" promptText="dd/MM/yyyy">
+                <DatePicker fx:id="dateLabel" prefHeight="41.0" prefWidth="300.0" promptText="MM/dd/yyyy">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -93,7 +93,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="800.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Mô tả ">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Mô tả :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -119,7 +119,7 @@
         </HBox>
         <HBox alignment="BOTTOM_RIGHT" prefHeight="82.0" prefWidth="800.0">
             <children>
-                <Button onAction="#ChangeImportBillHandler" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Sửa">
+                <Button mnemonicParsing="false" onAction="#ChangeImportBillHandler" prefHeight="50.0" prefWidth="90.0" text="Sửa">
                     <HBox.margin>
                         <Insets bottom="10.0" right="10.0" />
                     </HBox.margin>

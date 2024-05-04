@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -9,17 +10,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.product_InfoController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="600.0" styleClass="all" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.product_InfoController">
     <children>
-        <Label alignment="CENTER" prefHeight="27.0" prefWidth="247.0" text="Thông tin sản phẩm">
+        <Label alignment="CENTER" prefHeight="27.0" prefWidth="247.0" styleClass="title" text="Thông tin sản phẩm">
             <font>
                 <Font size="18.0" />
             </font></Label>
-      <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <GridPane prefHeight="181.0" prefWidth="600.0">
+      <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" styleClass="image" />
+      <GridPane prefHeight="245.0" prefWidth="600.0" styleClass="itemBlock">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="208.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="392.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="211.4000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="366.59997558593756" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -27,14 +28,17 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="18.0" prefWidth="120.0" text="Tên sản phẩm" />
+            <Label prefHeight="18.0" prefWidth="120.0" text="Tên sản phẩm:" />
             <Label fx:id="nameLable" text="Label" GridPane.columnIndex="1" />
-            <Label prefHeight="18.0" prefWidth="131.0" text="Số lượng trong kho" GridPane.rowIndex="1" />
-            <Label prefHeight="18.0" prefWidth="219.0" text="Mô tả" GridPane.rowIndex="2" />
+            <Label prefHeight="22.0" prefWidth="151.0" text="Số lượng trong kho:" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="219.0" text="Mô tả:" GridPane.rowIndex="2" />
             <Label fx:id="quantityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="describeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
       </GridPane>
-      <HBox prefHeight="192.0" prefWidth="600.0" />
+      <HBox prefHeight="59.0" prefWidth="600.0" />
     </children>
 </VBox>

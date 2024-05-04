@@ -65,16 +65,12 @@ public class importBill_ItemController implements Initializable {
         window.show();
     }
 
-
     public void setData(ImportBill importBill, importBillListController controller){
         this.importBill = importBill;
         this.i =controller;
         ImportBillName.setText( importBill.getName() );
         Date.setText("Nhập ngày: " + importBill.getDate());
     }
-
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

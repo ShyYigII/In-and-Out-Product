@@ -1,14 +1,45 @@
-HBox{
-  -fx-border-color: black;
+.itemBlock{
+  -fx-border-color: #ECC95F;
   -fx-border-width: 1px;
+  -fx-padding: 10px;
+  -fx-margin: 10px 0 0 0;
 }
 
 Button{
- -fx-background-radius: 50;
-  cursor: pointer;
- -fx-background-color:  #ECC95F;
+ -fx-background-color:  #F68A1F;
+  -fx-text-fill: #fefefe;
 }
 
 Button:hover {
-    -fx-background-color: #F68A1F;
+    -fx-cursor: hand ;
+    -fx-text-fill: #fefefe;
+    -fx-background-color: #AD6116;
+}
+
+.threeButton{
+ -fx-background-radius: 50;
+-fx-font: 18px Serif;
+
+}
+
+
+.title{
+  -fx-text-fill: #f68a1f;
+-fx-font: 28px Serif;
+-fx-pref-height: 50;
+-fx-pref-width: 430;
+}
+
+.small{
+    -fx-font-size: 15px ;
+
+}
+
+.all{
+-fx-font-size: 15px;
+}
+
+.image{
+
+
 }

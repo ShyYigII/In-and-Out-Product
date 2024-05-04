@@ -18,4 +18,6 @@ module com.example.in_n_out_java {
     opens controller.importBill;
     exports controller.product;
     opens controller.product;
+    exports controller.exportBill;
+    opens controller.exportBill;
 }

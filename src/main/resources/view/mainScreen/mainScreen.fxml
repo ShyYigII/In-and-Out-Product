@@ -7,27 +7,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="50.0" style="-fx-background-color: #C6C6C6;" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainScreenController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="50.0" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainScreenController">
    <children>
-      <Label alignment="CENTER" prefHeight="75.0" prefWidth="234.0" text="Quản lý xuất nhập hàng ">
+      <Label alignment="CENTER" prefHeight="103.0" prefWidth="430.0" styleClass="title" text="Quản lý xuất nhập hàng " textFill="#f68a1f">
          <VBox.margin>
             <Insets />
          </VBox.margin>
          <font>
-            <Font name="Times New Roman" size="20.0" />
+            <Font name="Serif Regular" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnImport" focusTraversable="false" mnemonicParsing="false" onAction="#handleImportScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Quản lý nhập hàng ">
+      <Button fx:id="btnImport" focusTraversable="false" mnemonicParsing="false" onAction="#handleImportScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Quản lý nhập hàng " textFill="#fefefe">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnProduct" focusTraversable="false" mnemonicParsing="false" onAction="#handleProductScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Xem thông tin hàng trong kho">
+      <Button fx:id="btnProduct" focusTraversable="false" mnemonicParsing="false" onAction="#handleProductScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Xem thông tin hàng trong kho" textFill="#fefefe">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnExport" focusTraversable="false" mnemonicParsing="false" onAction="#handleExportScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Quản lý xuất hàng ">
+      <Button fx:id="btnExport" focusTraversable="false" mnemonicParsing="false" onAction="#handleExportScene" prefHeight="100.0" prefWidth="270.0" styleClass="threeButton" stylesheets="@../../css/item.css" text="Quản lý xuất hàng " textFill="#fefefe">
          <font>
             <Font size="18.0" />
          </font>

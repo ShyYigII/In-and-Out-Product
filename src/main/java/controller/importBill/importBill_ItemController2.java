@@ -27,7 +27,7 @@ public class importBill_ItemController2 implements Initializable {
     @FXML
     private HBox around;
     private ImportBill importBill;
-//    private importBillListController2 i;
+    private importBillListController2 i;
 
     @FXML
     void click2(ActionEvent event) throws IOException {
@@ -51,7 +51,7 @@ public class importBill_ItemController2 implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/importBill/importBillChangeInfo.fxml"));
         Parent root = loader.load();
         ChangeimportProductController controller = loader.getController();
-        controller.setInfo(importBill);
+        controller.setInfo(importBill,i);
 
         Scene sceneImport = new Scene(root);
         Stage window = new Stage();
@@ -67,7 +67,7 @@ public class importBill_ItemController2 implements Initializable {
 
     public void setData(ImportBill importBill, importBillListController2 controller){
         this.importBill = importBill;
-//        this.i =controller;
+        this.i =controller;
         ImportBillName.setText( importBill.getName() );
         Date.setText("Nhập ngày: " + importBill.getDate());
     }

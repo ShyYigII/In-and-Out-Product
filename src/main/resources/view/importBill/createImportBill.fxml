@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.importProductController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.importProductController">
     <children>
-        <Label text="Phiếu nhập hàng ">
+        <Label alignment="CENTER" styleClass="title" text="Phiếu nhập hàng ">
             <font>
                 <Font size="22.0" />
             </font></Label>
@@ -136,7 +136,7 @@
                   <Font size="15.0" />
                </font>
                 </Label>
-                <DatePicker fx:id="date" prefHeight="40.0" prefWidth="300.0" promptText="dd/MM/yyyy">
+                <DatePicker fx:id="date" prefHeight="40.0" prefWidth="300.0" promptText="MM/dd/yyyy">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>

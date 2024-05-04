@@ -106,8 +106,8 @@ public class importBillListController2 implements Initializable {
     }
 
     public  void refreshData() {
-        howToFind(importBills);
-
+        ImportBillsLayout.getChildren().clear();
+        findByName();
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

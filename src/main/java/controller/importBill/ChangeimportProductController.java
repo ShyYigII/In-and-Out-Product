@@ -2,14 +2,10 @@ package controller.importBill;
 
 import dao.importProductBillDAO;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import model.ImportBill;
-import model.Product;
 import service.updateDataHandler;
 import java.time.LocalDate;
 import java.io.IOException;
@@ -35,12 +31,12 @@ public class ChangeimportProductController  implements Initializable {
     private int id;
 
     private importBillListController2 i;
-    public void setInfo(ImportBill importBill){
+    public void setInfo(ImportBill importBill, importBillListController2 i){
         this.id = importBill.getId();
         describeLabel.setText(importBill.getDescription());
         priceLabel.setText(String.format("%d", importBill.getPrice()));
         supplierLabel.setText(importBill.getSupplier());
-
+        this.i = i;
         String dateString = importBill.getDate();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate importDate = LocalDate.parse(dateString, formatter);
@@ -120,7 +116,9 @@ public class ChangeimportProductController  implements Initializable {
             int row =  updateDataHandler.getInstance().changeImportBill(x);
             if (row == 1) {
                 allertImportBill(1);
+                i.refreshData();
                 CancelCreateBill();
+
 
             }
         }

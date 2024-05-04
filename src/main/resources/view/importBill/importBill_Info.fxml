@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.importBill_InfoController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="all" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.importBill.importBill_InfoController">
     <children>
-        <Label text="Phiếu nhập hàng ">
+        <Label alignment="CENTER" styleClass="title" text="Phiếu nhập hàng ">
             <font>
                 <Font size="22.0" />
             </font></Label>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Tên sản phẩm* ">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Tên sản phẩm*  :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -25,7 +25,7 @@
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="nameLable" prefHeight="40.0" prefWidth="300.0" text="cc ">
+                <Label fx:id="nameLable" prefHeight="40.0" prefWidth="300.0">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -43,7 +43,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Nhà phân phối*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Nhà phân phối* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -69,7 +69,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Số lượng*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Số lượng* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -95,7 +95,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Giá nhập hàng (VNĐ)*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Giá nhập hàng (VNĐ)* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -121,7 +121,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Ngày nhập hàng*">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Ngày nhập hàng* :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>
@@ -144,7 +144,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="18.0" prefWidth="200.0" text="Mô tả ">
+                <Label prefHeight="18.0" prefWidth="200.0" text="Mô tả :">
                     <HBox.margin>
                         <Insets left="10.0" />
                     </HBox.margin>

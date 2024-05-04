@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../css/delete.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.productListController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.productListController">
     <top>
         <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
             <children>
-                <Label alignment="CENTER" prefHeight="27.0" prefWidth="296.0" text="Tìm sản phẩm trong kho">
+                <Label alignment="CENTER" prefHeight="27.0" prefWidth="296.0" styleClass="title" text="Tìm sản phẩm trong kho">
                     <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </VBox.margin>
@@ -30,7 +30,7 @@
                      <font>
                         <Font size="16.0" />
                      </font></TextField>
-                        <Button id="FindButton" fx:id="btnFind" focusTraversable="false" mnemonicParsing="false" onAction="#findByName" prefHeight="40.0" prefWidth="190.0" text="Tìm kiếm ">
+                        <Button id="FindButton" fx:id="btnFind" focusTraversable="false" mnemonicParsing="false" onAction="#findByName" prefHeight="40.0" prefWidth="190.0" styleClass="threeButton" text="Tìm kiếm ">
                             <HBox.margin>
                                 <Insets left="10.0" />
                             </HBox.margin>
@@ -57,9 +57,9 @@
    <center>
       <HBox prefHeight="450.0" prefWidth="737.0" BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane prefHeight="450.0" prefWidth="662.0" styleClass="transparents">
+            <ScrollPane prefHeight="450.0" prefWidth="723.0" styleClass="transparents">
                <content>
-                  <VBox fx:id="ProductsLayout" prefHeight="446.0" prefWidth="638.0">
+                  <VBox fx:id="ProductsLayout" prefHeight="446.0" prefWidth="702.0">
                      <padding>
                         <Insets left="50.0" right="30.0" top="10.0" />
                      </padding>

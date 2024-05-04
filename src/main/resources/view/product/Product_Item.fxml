@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="around" alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="610.0" spacing="10.0" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.product_ItemController">
+<HBox fx:id="around" alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="610.0" spacing="10.0" styleClass="itemBlock" stylesheets="@../../css/item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.product_ItemController">
    <children>
-      <ImageView fx:id="image" fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image" fitHeight="94.0" fitWidth="124.0" pickOnBounds="true">
          <image>
             <Image url="@../../img/972601.png" />
          </image>
