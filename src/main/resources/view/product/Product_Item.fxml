@@ -15,15 +15,25 @@
             <Image url="@../../img/972601.png" />
          </image>
       </ImageView>
-      <Label fx:id="ProductName" focusTraversable="false" prefHeight="50.0" prefWidth="261.0" text="Tên">
+      <Label fx:id="ProductName" focusTraversable="false" prefHeight="50.0" prefWidth="113.0" text="Tên">
          <HBox.margin>
-            <Insets bottom="20.0" left="50.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="50.0" top="20.0" />
          </HBox.margin>
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="seeInfoButton" mnemonicParsing="false" onAction="#click2" prefHeight="40.0" prefWidth="126.0" text="Xem" />
+      <Label prefHeight="20.0" prefWidth="82.0" text="Số lượng: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="quantityLabel" prefHeight="18.0" prefWidth="47.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="seeInfoButton" mnemonicParsing="false" onAction="#click2" prefHeight="40.0" prefWidth="119.0" text="Xem" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

@@ -119,7 +119,6 @@ public class ChangeimportProductController  implements Initializable {
                 i.refreshData();
                 CancelCreateBill();
 
-
             }
         }
 

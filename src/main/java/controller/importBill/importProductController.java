@@ -2,6 +2,7 @@ package controller.importBill;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -11,17 +12,21 @@ import model.Product;
 import service.updateDataHandler;
 import controller.switchSceneController;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class importProductController {
+public class importProductController implements Initializable {
 
     @FXML private Button btnCancel, btnDeleteImportBill, btnBackToMainScreen, btncreateImportBill, btnAddImportBill ,btnFindImportBill,btnImportProductMain;
     @FXML private TextField nameTextField, supplierTextField,quantityTextField,priceTextField;
     @FXML private DatePicker date;
     @FXML private TextArea describeTextArea;
-
+    private String[] productList = {"Thước kẻ","Bút bi", "Bút chì" , "Bảng con" , "Bút xóa" , "Bút nhớ" , "Tẩy" , "Vở" , "Máy tính" , "Bút màu"};
+    private ArrayList<String> productList2 =new ArrayList<>();
     public void backToMainScreen() throws IOException {
             switchSceneController.getInstance().backToMainScreen(btnBackToMainScreen);
     }
@@ -45,11 +50,18 @@ public class importProductController {
 
     @FXML
     private void allertImportBill(int n){
-        if(n > 0){
+        if(n ==1 ){
             Alert alertCreateImportBillSuccessfully = new Alert(Alert.AlertType.INFORMATION);
             alertCreateImportBillSuccessfully.setTitle("Thêm phiếu nhập hàng thành công!!!");
             alertCreateImportBillSuccessfully.setHeaderText("Bạn đã thêm phiếu nhập hàng thành công");
             alertCreateImportBillSuccessfully.showAndWait();
+
+        }
+        else if(n == -1){
+            Alert alertCreateImportBillUnSuccessfully2 = new Alert(Alert.AlertType.INFORMATION);
+            alertCreateImportBillUnSuccessfully2.setTitle("Thêm phiếu nhập hàng thất bại!!!");
+            alertCreateImportBillUnSuccessfully2.setHeaderText("Xin hãy điền đủ đúng tên sản phẩm");
+            alertCreateImportBillUnSuccessfully2.show();
 
         }
         else {
@@ -72,6 +84,7 @@ public class importProductController {
 
     @FXML
     public void AddImportBillHandler() throws IOException, SQLException {
+        System.out.println(productList2);
         String productName = nameTextField.getText().trim();
         String supplierName = supplierTextField.getText().trim();
         int quantity = -1;
@@ -108,6 +121,10 @@ public class importProductController {
         if(productName.isEmpty() || supplierName.isEmpty() || dateImport.isEmpty()) {
             allertImportBill(0);
         }
+        else if(!productList2.contains(productName)){
+            allertImportBill(-1);
+
+        }
         else{
             ImportBill importbill = new ImportBill(productName,supplierName,quantity,price,dateImport,description);
             ArrayList<ImportBill> a = new ArrayList<>();
@@ -129,9 +146,11 @@ public class importProductController {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        productList2.addAll(List.of(productList));
 
-
-
+    }
 }
 
 

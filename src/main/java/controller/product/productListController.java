@@ -1,6 +1,7 @@
 package controller.product;
 
 import dao.productDAO;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -17,6 +19,8 @@ import model.Product;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 public class productListController implements Initializable {
@@ -31,7 +35,10 @@ public class productListController implements Initializable {
     public productListController getInstance() {
        return this;
     }
-
+    @FXML
+    private ChoiceBox<String> choicebox;
+    private String[] ChoiceList = {"Chữ cái", "Số lượng"};
+    private boolean check = false;
 
     private void howToFind(ArrayList<Product> ProductList){
         ProductsLayout.getChildren().clear();
@@ -97,8 +104,13 @@ public class productListController implements Initializable {
             ArrayList<Product> a = productDAO.getInstance().selectByName(s);
             products.addAll(a);
         }
-
-        howToFind(products);
+        if(!check){
+            Collections.sort(products, (o1, o2) -> {return o1.getName().compareTo(o2.getName());});
+            howToFind(products);}
+        else{
+            Collections.sort(products, (o1, o2) -> {return -o1.getQuantity() + o2.getQuantity();});
+            howToFind(products);
+        }
 
     }
 
@@ -106,7 +118,22 @@ public class productListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<Product> ProductList = products;
-        howToFind(products);
+        choicebox.setValue("Chữ cái");
+         choicebox.getItems().addAll(ChoiceList);
+        choicebox.getSelectionModel().selectedIndexProperty().addListener(
+                (ObservableValue<? extends Number> ov, Number old_val, Number new_val) -> {
+                   if(new_val.equals(1)){
+                       check= true;
+                       findByName();
+                   }
+                   else {
+                       check = false;
+                        findByName();
+                   }
+                    howToFind(products);
+
+                });
+
         }
 
 

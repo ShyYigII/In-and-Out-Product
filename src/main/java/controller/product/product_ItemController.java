@@ -35,6 +35,8 @@ public class product_ItemController implements Initializable {
     private productListController i;
     @FXML
     private ImageView image;
+    @FXML
+    private Label quantityLabel;
 
 
     @FXML
@@ -61,6 +63,7 @@ public class product_ItemController implements Initializable {
         ProductName.setText(product.getName());
         Image imagezz = new Image(getClass().getResourceAsStream(product.getImgSrc()));
         image.setImage(imagezz);
+        quantityLabel.setText(String.format("%d",product.getQuantity()));
     }
 
 
