@@ -62,4 +62,20 @@ public class switchSceneController {
         window.show();
     }
 
+    public void CancelCreateExportBill(Button b) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/exportBill/exportProducts.fxml"));
+        Scene sceneImport = new Scene(root);
+        Stage window = (Stage) b.getScene().getWindow();
+        window.setScene(sceneImport);
+        window.show();
+    }
+
+    public void createExportBill(Button b) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/exportBill/createExportBill.fxml"));
+        Scene sceneImport = new Scene(root);
+        Stage window = (Stage) b.getScene().getWindow();
+        window.setScene(sceneImport);
+        window.show();
+    }
+
 }

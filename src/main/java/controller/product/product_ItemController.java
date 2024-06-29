@@ -48,7 +48,6 @@ public class product_ItemController implements Initializable {
 
         controller.setInfo(product);
 
-
         Scene sceneImport = new Scene(root);
         Stage window = new Stage();
         window.setScene(sceneImport);
@@ -64,6 +63,7 @@ public class product_ItemController implements Initializable {
         Image imagezz = new Image(getClass().getResourceAsStream(product.getImgSrc()));
         image.setImage(imagezz);
         quantityLabel.setText(String.format("%d",product.getQuantity()));
+
     }
 
 

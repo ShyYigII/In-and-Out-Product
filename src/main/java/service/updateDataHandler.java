@@ -1,5 +1,6 @@
 package service;
 
+import model.ExportBill;
 import model.ImportBill;
 import dao.*;
 import model.Product;
@@ -22,6 +23,15 @@ public class updateDataHandler {
    public int changeImportBill(ImportBill importBill) {
        int rowOfBill = importProductBillDAO.getInstance().update(importBill);
         return rowOfBill;
+    }
+
+    public int crateExportBill(ExportBill exportBill, Product product){
+        int rowOfBill = exportProductBillDAO.getInstance().insert(exportBill);
+        int rowofProduct =  productDAO.getInstance().update(product);
+
+//        ArrayList<ImportBill> importBillsList = importProductBillDAO.getInstance().selectAll();
+
+        return rowOfBill+ rowofProduct;
     }
 
 

@@ -14,7 +14,7 @@ public class exportProductBillDAO implements DAOInterface<ExportBill>{
 
     @Override
     public int insert(ExportBill o) {
-        String sql = "INSERT INTO `testdb`.`importbill` (name, supplier, quantity, price, date,description) VALUES (?, ?, ?, ?, ?,?)";
+        String sql = "INSERT INTO `testdb`.`exportbill` (name, supplier, quantity, price, date,description) VALUES (?, ?, ?, ?, ?,?)";
         try(Connection con = JDBC.getConnection();
             PreparedStatement statement = con.prepareStatement(sql);) {
             statement.setString(1, o.getName());

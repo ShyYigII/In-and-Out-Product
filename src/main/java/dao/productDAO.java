@@ -23,20 +23,22 @@ public class productDAO  implements DAOInterface<Product>{
 
     @Override
     public int update(Product o) {
-        String sql = "UPDATE `testdb`.`product`  SET quantity = quantity + ?  WHERE name = ?";
-        try(Connection con = JDBC.getConnection();
-            PreparedStatement statement = con.prepareStatement(sql);) {
-            statement.setInt(1,  o.getQuantity());
-            statement.setString(2, o.getName());
-            int rowsAffected = statement.executeUpdate();
-            System.out.println("Rows effected: " + rowsAffected) ;
-            return rowsAffected;
+           String sql = "UPDATE `testdb`.`product`  SET quantity = quantity + ?  WHERE name = ?";
+           try (Connection con = JDBC.getConnection();
+                PreparedStatement statement = con.prepareStatement(sql);) {
+               statement.setInt(1, o.getQuantity());
+               statement.setString(2, o.getName());
+               int rowsAffected = statement.executeUpdate();
+               System.out.println("Rows effected: " + rowsAffected);
+               return rowsAffected;
 
-        }
-        catch (SQLException e){
-            throw new RuntimeException(e);
-        }
+           } catch (SQLException e) {
+               throw new RuntimeException(e);
+           }
     }
+
+
+
 
     @Override
     public ArrayList<Product> selectAll() {

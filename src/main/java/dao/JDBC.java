@@ -3,7 +3,6 @@ package dao;
 import java.sql.*;
 
 public class JDBC {
-
         public static Connection getConnection() {
             String url = "jdbc:mysql://localhost:3306/testdb";
             String user = "root";

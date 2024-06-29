@@ -1,6 +1,7 @@
 package controller.importBill;
 
 import dao.importProductBillDAO;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -16,7 +18,10 @@ import model.ImportBill;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 public class importBillListController implements Initializable {
@@ -27,10 +32,16 @@ public class importBillListController implements Initializable {
     Button btnCancel2, btnFind;
     @FXML
     TextField findByNameTextField;
+    @FXML
+    private ChoiceBox<String> choicebox;
     private ArrayList<ImportBill>importBills = new ArrayList<>();
     public importBillListController getInstance() {
        return this;
     }
+
+    private boolean check = false;
+    private String[] ChoiceList = {"Chữ cái", "Ngày nhập"};
+
 
 //    private ArrayList<ImportBill> getData(){
 //       importBills = importProductBillDAO.getInstance().selectAll();
@@ -101,7 +112,17 @@ public class importBillListController implements Initializable {
             importBills.addAll(a);
         }
 
-        howToFind(importBills);
+        if(!check){
+            Collections.sort(importBills, (o1, o2) -> {return o1.getName().compareTo(o2.getName());});
+            howToFind(importBills);}
+        else{
+
+            Collections.sort(importBills, (o1, o2) -> {
+                LocalDate date1 = LocalDate.parse(o1.getDate(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                LocalDate date2 = LocalDate.parse(o2.getDate(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                return date2.compareTo(date1);
+            });
+            howToFind(importBills);}
 
     }
 
@@ -109,7 +130,21 @@ public class importBillListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<ImportBill> BillList = importBills;
-        howToFind(importBills);
+        choicebox.setValue("Chữ cái");
+        choicebox.getItems().addAll(ChoiceList);
+        choicebox.getSelectionModel().selectedIndexProperty().addListener(
+                (ObservableValue<? extends Number> ov, Number old_val, Number new_val) -> {
+                    if(new_val.equals(1)){
+                        check= true;
+                        findByName();
+                    }
+                    else {
+                        check = false;
+                        findByName();
+                    }
+                    howToFind(importBills);
+
+                });
         }
 
 

@@ -34,10 +34,10 @@ public class mainScreenController {
 
 
     public void handleExportScene() throws IOException {
-//        Parent root = FXMLLoader.load(getClass().getResource("/view/exportProducts.fxml"));
-//        Scene sceneImport = new Scene(root, 800,600);
-//        Stage window = (Stage) btnExport.getScene().getWindow();
-//        window.setScene(sceneImport);
+        Parent root = FXMLLoader.load(getClass().getResource("/view/exportBill/exportProducts.fxml"));
+        Scene sceneImport = new Scene(root, 800,600);
+        Stage window = (Stage) btnExport.getScene().getWindow();
+        window.setScene(sceneImport);
 
     }
 
